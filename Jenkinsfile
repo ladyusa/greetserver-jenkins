@@ -1,10 +1,10 @@
 pipeline {
-     agent { label 'master' }
+     agent any
      stages {
           stage('Source') {
                steps {
                     git branch: 'main',
-                        url: 'https://github.com/ladyusa/greetserver-jenkins'
+                        url: 'https://github.com/ladyusa/greetserver-jenkins.git'
                }
           }
           stage('Build') {
